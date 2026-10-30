@@ -191,7 +191,7 @@ function nextTarget(now = new Date()) {
   return t;
 }
 let target = nextTarget();
-let start = new Date(target); start.setDate(start.getDate() - 7);   // previous Monday 17:30
+let start = new Date(target); start.setDate(start.getDate() - 5); start.setHours(14, 0, 0, 0);   // the Wednesday 2:00 PM before the target
 document.getElementById('target').textContent =
   target.toLocaleString(undefined, { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' });
 
